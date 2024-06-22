@@ -297,6 +297,19 @@ O principal recurso necessário para o Azure Machine Learning é um *workspace d
 
 ## Conceitos básicos dos serviços de IA do Azure (Azure AI Services)
 
+Os serviços de IA do Azure foram projetados para serem usados em diferentes ambientes de desenvolvimento, com codificação mínima. Os desenvolvedores podem acessar os serviços de IA por meio de APIs REST, bibliotecas de clientes ou integrá-los a ferramentas como Aplicativos Lógicos e Power Automate.
+
+Existem dois tipos de recursos dos serviços de IA: *multisserviço* ou *serviço único*. Requisitos de desenvolvimento e a forma como você deseja que os custos sejam cobrados determinam os tipos de recursos necessários.
+
+- **Recurso multisserviço**: use o recurso **serviços de IA do Azure** para obter acesso a vários serviços de IA do Azure com uma só chave e ponto de extremidade (*endpoint*). Nesse caso todos os seus serviços de IA serão cobrados juntos.
+- **Recurso de serviço único**: recurso com acesso a um serviço determinado de IA do Azure, com uma chave e um ponto de extremidade (*endpoint*) exclusivos. Indicado quando precisa obter apenas um serviço de IA ou deseja ver as informações de custo separadamente.
+
+Depois de compilar um recurso de serviço de IA do Azure, você pode criar aplicativos usando a API REST, kits de desenvolvimento de software (SDKs) ou interfaces de estúdio visual.
+
+Antes de usar um recurso de serviço de IA, você deve associá-lo ao estúdio que deseja usar na página *Configurações*, selecionando o recurso e selecionando **Usar Recurso**.
+
+Quando você escreve código para acessar o serviço de IA, as *chaves* e o *ponto de extremidade* (URL por ex.: ```https://myaiservices29.cognitiveservices.azure.com```) precisam ser incluídos no cabeçalho da autenticação. Quando você usa uma interface de estúdio com os serviços de IA do Azure, suas credenciais são autenticadas quando você faz login, e um processo semelhante acontece em segundo plano.
+
 ## Fundamentos da Pesquisa Visual Computacional (Computer Vision)
 
 ## Conceitos básicos do reconhecimento facial
