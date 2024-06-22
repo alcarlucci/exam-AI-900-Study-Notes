@@ -338,6 +338,30 @@ O serviço Visão de IA do Azure da Microsoft oferece modelos de pesquisa visual
 
 ## Conceitos básicos do reconhecimento facial
 
+A **Detecção Facial** envolve a identificação de regiões de uma imagem que contenham um rosto humano, geralmente retornando coordenadas da caixa delimitadora que formam um retângulo ao redor do rosto, como abaixo:
+
+![face-detection](./img/face-detection.png)
+
+Com a **Análise da Detecção Facial**, os recursos faciais podem ser utilizados para treinar modelos de machine learning para retornar outras informações, como características faciais como nariz, olhos, sobrancelhas, lábios e outros. Podendo até identificar indivíduos conhecidos com base nos traços do rosto deles, sso é conhecido como *Reconhecimento da Detecção Facial*. O **Serviço Detecção Facial de IA do Azure** fornece modelos pré-treinados para detectar, reconhecer e analisar rostos.
+
+Qualquer pessoa pode usar o serviço de Detecção Facial para:
+
+- Detectar a localização de rostos em uma imagem.
+- Determinar se a pessoa está usando óculos.
+- Determinar se existe oclusão, desfoque, ruído ou exposição excessiva ou insuficiente em qualquer um dos rostos.
+- Retornar as coordenadas da pose da cabeça para cada rosto em uma imagem.
+
+A *política de Acesso Limitado* exige que os clientes enviem um formulário de admissão para acessar recursos adicionais do serviço de Detecção Facial da IA do Azure, incluindo:
+
+- Capacidade de comparar a similaridade de rostos.
+- Capacidade de identificar indivíduos nomeados em uma imagem.
+
+Algumas considerações na detecção nas imagens:
+
+- **Formato de imagem**: suportados JPEG, PNG, GIF e BMP.
+- **Tamanho do arquivo**: 6 MB ou menos.
+- **Intervalo de tamanho do rosto**: de 36 x 36 pixels até 4096 x 4096 pixels
+
 ## Princípios básicos do reconhecimento óptico de caracteres (OCR)
 
 ## Conceitos básicos da Análise de Texto com o Serviço de Linguagem
