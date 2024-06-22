@@ -312,6 +312,30 @@ Quando você escreve código para acessar o serviço de IA, as *chaves* e o *pon
 
 ## Fundamentos da Pesquisa Visual Computacional (Computer Vision)
 
+Uma das arquiteturas de modelos de machine learning mais comuns para a pesquisa visual computacional é uma **rede neural convolucional (CNN)**. As CNNs usam filtros para extrair mapas de recursos numéricos de imagens e, em seguida, alimentam os valores desses recursos em um modelo de aprendizado profundo para gerar uma previsão de rótulo.
+
+O sucesso dos *transformadores* como forma de criar modelos de linguagem levou os pesquisadores de IA a considerar se essa mesma abordagem seria eficaz para dados de imagem. O resultado é o desenvolvimento de **modelos multimodais**, nos quais o modelo é treinado usando um grande volume de imagens legendadas, sem rótulos fixos. O modelo geral encapsula as relações entre inserções de token de linguagem natural e recursos de imagem.
+
+O modelo **Florence da Microsoft** é um exemplo desses modelos. Treinado com grandes volumes de imagens legendadas da Internet, ele inclui tanto um *codificador de idioma* quanto um *codificador de imagem*.
+
+Você pode usar o *Florence* como um modelo base para modelos adaptáveis que executam:
+
+- *Classificação de imagens*: identifica a categoria à qual uma imagem pertence.
+- *Detecção de Objetos*: localiza objetos individuais dentro de uma imagem.
+- *Legendas*: gera descrições apropriadas de imagens.
+- *Marcação (TAG)*: compila uma lista de marcas de texto relevantes para uma imagem.
+
+O serviço Visão de IA do Azure da Microsoft oferece modelos de pesquisa visual computdisparal pré-construídos e personalizáveis que se baseiam no modelo de base Florence e fornecem vários recursos avançados.
+
+**Serviço Visão de IA do Azure** (criar recurso Único/Multisserviço) > **Estúdio do Visão de IA do Azure**:
+
+- Reconhecimento óptico de caracteres (OCR) - extração de texto de imagens.
+- Geração de legendas e descrições de imagens.
+- Detecção de milhares de objetos comuns em imagens.
+- Marcação de recursos visuais em imagens (tags - metadados - indexar)
+- Classificação de imagens
+- Detecção de objetos
+
 ## Conceitos básicos do reconhecimento facial
 
 ## Princípios básicos do reconhecimento óptico de caracteres (OCR)
