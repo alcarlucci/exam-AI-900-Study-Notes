@@ -151,6 +151,150 @@ O desenvolvimento de software de IA, na Microsoft, é guiado por um conjunto de 
 
 ## Princípios básicos do aprendizado de máquina (Machine Learning)
 
+O aprendizado de máquina é, em muitos aspectos, a interseção de duas disciplinas: ciência de dados e engenharia de software. O objetivo do aprendizado de máquina é utilizar dados para criar um modelo preditivo que possa ser incorporado a um aplicativo ou serviço de software.
+
+O aprendizado de máquina tem suas origens na estatística e na modelagem matemática de dados. A ideia fundamental do aprendizado de máquina é utilizar dados de observações passadas para prever resultados ou valores desconhecidos.
+
+### O aprendizado de máquina como uma *função*
+
+Um modelo de aprendizado de máquina é um aplicativo de software que encapsula uma **função** para calcular um valor de saída com base em um ou mais valores de entrada.
+
+- **treinamento**: processo de definição da função que será utilizada pelo modelo de machine learning;
+- **inferência**: processo de utilização da *funcão* para prever novos valores de dados.
+
+Etapadas envolvidas no *treinamento* e na *inferência*:  
+![machine-learning-fn](./img/machine-learning-fn.png)
+
+- **1.** Os dados de treinamento consistem em observações passadas, incluindo nessas observaçoes:
+  - *recursos*: atributos do objeto que está sendo observado, referidos como ***x***
+  - *rótulo*: é o valor conhecido do objeto que você deseja treinar um modelo para prever, referidos como ***y***
+- **2.** Um *algoritmo* é aplicado aos dados para tentar determinar um relacionamento entre os *recursos* e o *rótulo* e generalizar esse relacionamento como um cálculo que pode ser executado em ***x*** para calcular ***y***. O princípio básico é tentar ajustar uma *função* aos dados, na qual os valores dos recursos podem ser usados para calcular o rótulo.
+- **3.** O resultado do algoritmo é um *modelo* que encapsula o cálculo derivado pelo algoritmo como uma função ***f*** : *`y = f(x)`*
+- **4.** O modelo treinado pode então ser utilizado para *inferência*: dar entrada em um conjunto de valores de recursos e receber como saída uma previsão do rótulo correspondente.
+
+Para exemplificar de forma simples, vamos considerar os cenários abaixo:
+
+- Cenário de vendas de sorvete: treinar um modelo que possa prever o número de vendas de sorvete com base na previsão do tempo. As medidas meteorológicas do dia (temperatura, precipitação, velocidade do vento etc.) serão os *recursos* (**x**), e o número de sorvetes vendidos em cada dia será o *rótulo* (**y**).
+- Cenário médico: prever se um paciente está ou não em risco de diabetes com base nas suas medições clínicas. As medidas do paciente (peso, nível de glicose no sangue etc.) são *recursos* (**x**), e a probabilidade de diabetes (por exemplo, 1 para em risco, 0 para sem risco) é o *rótulo* (**y**).
+- Cenário de pesquisa na Antártica: prever a espécie de um pinguim com base em seus atributos físicos. As principais medidas do pinguim (comprimento das nadadeiras, largura do bico e assim por diante) são os *recursos* (**x**) e a espécie (por exemplo, 0 para Adélia, 1 para Gentoo ou 2 para Chinstrap) é o *rótulo* (**y**).
+
+### Tipos de aprendizado de máquina
+
+Aplicar o tipo apropriado de Machine Learning depende do que você está tentando prever. Tipos comuns de aprendizado de máquina:  
+![machine-learning-types](./img/machine-learning-types.png)
+
+#### Machine Learning supervisionado
+
+Algoritmos de aprendizado de máquina em que os dados de treinamento incluem valores de recursos e valores conhecidos de rótulo. Utilizado para treinar modelos determinando um relacionamento entre os recursos e os rótulos em observações passadas, de modo que rótulos desconhecidos possam ser previstos para recursos em casos futuros.
+
+- **Regressão**: tipo em que o rótulo previsto pelo modelo é um valor numérico.
+- **Classificação**: tipo em que o rótulo representa uma categorização, ou classe. Existem dois tipos comuns de classificação:
+  - *Classificação binária*: o rótulo determina se o item observado *é* (ou *não é*) uma instância de uma classe específica - um de dois resultados mutuamente exclusivos (V/F).
+  - *Classificação multiclasse*: prever um rótulo que representa uma das várias classes possíveis - utilizada para prever rótulos (várias classes) mutuamente exclusivos, além de algoritmos para treinar modelos de classificação com vários rótulos concomitantes.
+
+#### Machine Learning não supervisionado
+
+Envolve o treinamento de modelos usando dados que consistem apenas em valores de recursos sem rótulos conhecidos. Determinam relacionamentos entre os recursos das observações nos dados de treinamento.
+
+- **Clustering**: Um algoritmo de clustering identifica semelhanças entre observações com base nos seus recursos e as agrupa em clusters discretos. Diferente do que ocorre na classificação, no clustering, não existe um rótulo de cluster previamente conhecido e o algoritmo agrupa as observações de dados com base puramente na similaridade dos recursos. Em alguns casos, o clustering é utilizado para determinar o conjunto de classes existentes antes de treinar um modelo de classificação. Cenários de exemplo:
+  - Agrupe flores semelhantes com base no tamanho, no número de folhas e no número de pétalas.
+  - Identificar os grupos de clientes semelhantes com base nos atributos demográficos e no comportamento de compra.
+
+### Regressão
+
+Os modelos de regressão são treinados para prever valores numéricos de rótulo com base em dados de treinamento que incluem recursos e rótulos conhecidos.
+
+Quatro elementos-chave do processo de **treinamento** de modelos de machine learning supervisionados:
+![supervised-training](./img/supervised-training.png)
+
+1. Criar um conjunto de dados com o qual treinar o modelo, mantendo um subconjunto dos dados que você usará para validar o modelo treinado.
+2. Usar um algoritmo para ajustar os dados de treinamento a um modelo, como *regressão linear* para um algortimo de regressão.
+3. Use os dados de validação retidos para testar o modelo prevendo rótulos dos recursos.
+4. Compare os *rótulos reais* conhecidos no conjunto de dados de validação com os *rótulos previstos* pelo modelo. Em seguida, agregue as diferenças entre os valores de rótulo *previstos* e *reais* para calcular uma métrica que indica a precisão do modelo previsto para os dados de validação.
+
+Após cada treinamento, validação e iteração de avaliação, você pode repetir o processo com diferentes algoritmos e parâmetros até que uma métrica de avaliação aceitável seja alcançada.
+
+#### Métricas de avaliação de regressão
+
+Métricas comuns calculadas com base nas diferenças entre os valores previstos e reais, na avaliação de modelos de regressão.
+
+- **MAE (Erro Médio Absoluto)**: erro absoluto para cada previsão, independe se a previsão estava acima ou abaixo do valor real (ex.: 3 ou -3 indicam variação de 3).
+- **EQM (erro quadrático médio)**: uma maneira de produzir uma métrica que "amplifica" erros maiores, elevando ao quadrado os erros individuais e calculando a média dos valores quadrados.
+- **REQM (Raiz do Erro Quadrático Médio)**: métrica calculada a partir da raiz quadrada do EQM, utilizada para medir o erro em termos de quantidade e também levando em conta a magnitude dos erros.
+- **Coeficiente de determinação (R²)**: métrica que mede a proporção de variação nos resultados de validação que podem ser explicados pelo modelo, em oposição a algum aspecto anômalo dos dados de validação.
+
+Após várias iterações (**treinamento iterativo**), o modelo que resulta na melhor métrica de avaliação aceitável para o cenário específico é selecionado.
+
+### Classificação Binária
+
+Os algoritmos de *classificação binária* são usados para treinar um modelo que prevê um dos dois rótulos possíveis para uma única classe. Basicamente, a previsão de **verdadeiro** ou **falso**: vários valores de *recurso* (***x***) e um *rótulo* (***y***) que é **1** ou **0**.
+
+Há muitos algoritmos que podem ser usados para classificação binária, como **regressão logística**, que deriva uma função sigmoide (em forma de S) com valores entre *0,0* e *1,0*.
+
+#### Métricas de avaliação de classificação binária
+
+Primeiro deve-se criar uma matriz do número de previsões corretas e incorretas, chamada **Matriz de confusão**:
+
+- Verdadeiramente negativos (TN)
+- Falsos positivos (FP)
+- Falsos negativos (FN)
+- Verdadeiramente positivos (TP)
+
+Métricas de avaliação:
+
+- **Exatidão**: a proporção de previsões que o modelo acertou.
+- **Recall**: a proporção de casos positivos identificados corretamente pelo modelo.
+- **Precisão**: a proporção de casos positivos previstos em que o rótulo verdadeiro é realmente positivo.
+- **Medida F1**: é uma métrica geral que combina recall e precisão.
+- **Área sob a curva (AUC)**
+
+### Classificação Multiclasse
+
+Os algoritmos de *classificação multiclasse* são utilizados para calcular valores de probabilidades para rótulos de várias classes, habilitando um modelo a prever a classe *mais provável* para uma determinada observação.  
+Segue o mesmo processo iterativo *treinar*, *validar* e *avaliar* que a regressão e a classificação binária, no qual um subconjunto dos dados de treinamento é retido para validar o modelo treinado.
+
+Existem dois tipos de algoritmo para treinar um modelo de classificação multiclasse:
+
+- **Algoritmos One-vs-Rest (OvR)**: treinam uma função de classificação binária para cada classe. Um modelo treinado utilizando esse tipo de algoritmo prevê a classe de acordo com a função que produzir a saída de maior probabilidade.
+- **Algoritmos multinomiais**: cria uma única função que retorna uma saída com vários valores, um *vetor* que contém a distribuição de probabilidades para todas as classes possíveis (por ex.: função *softmax*).
+
+Você pode avaliar um classificador multiclasse calculando as métricas de classificação binária para cada classe individual. Alternativamente, você pode calcular as métricas de agregação que levam em conta todas as classes.
+
+### Clustering
+
+Esse tipo de machine learning é considerado não supervisionado porque não usa valores de rótulos conhecidos anteriormente para treinar um modelo. Em um modelo de clustering, o rótulo é o cluster ao qual a observação é atribuída com base apenas em seus recursos.
+
+Há vários algoritmos que você pode usar para clustering. Um dos algoritmos mais usados é o cluster **K-means**.
+
+Como não há um rótulo conhecido com o qual comparar as atribuições de cluster previstas, a avaliação de um modelo de clustering se baseia em quão bem os clusters resultantes são separados uns dos outros. Algumas métricas utilizadas para avaliar a separação de cluster:
+
+- **Distância média para o centro do cluster**
+- **Distância média para o outro centro**
+- **Distância máxima até o centro do cluster**
+- **Silhueta**
+
+### Deep Learning (Aprendizado Profundo)
+
+O *Deep Learning* é uma forma avançada de aprendizado de máquina que tenta emular a maneira como o cérebro humano aprende. A chave para o *aprendizado profundo* é a criação de uma *rede neural* artificial que simula a atividade eletroquímica em neurônios biológicos utilizando funções matemáticas.
+
+As redes neurais artificiais são compostas de várias camadas de neurônios - essencialmente definindo uma função profundamente aninhada, por esse motivo esses modelos são frequentemente chamados de *redes neurais profundas* (DNNs).
+
+Podem ser utilizadas para muitos tipos de problemas de aprendizado de máquina como regressão e classificação, bem como modelos mais especializados para processamento de linguagem natural e pesquisa visual computacional.
+
+O aprendizado profundo também envolve o ajuste dos dados de treinamento a uma função que pode prever um *rótulo* (***y***) com base no valor de um ou mais *recursos* (***x***)
+
+### Azure Machine Learning
+
+Serviço do Azure para gerenciar o ciclo de vida de ponta a ponta de projetos de machine learning:
+
+- Exploração de dados e preparação para modelagem.
+- Treinamento e avaliação de modelos de machine learning.
+- Registro e gerenciamento de modelos treinados.
+- Implantação de modelos treinados para uso por aplicativos e serviços.
+- Revisão e aplicação de princípios e práticas de IA responsáveis.
+
+O principal recurso necessário para o Azure Machine Learning é um *workspace do Azure Machine Learning*, que você pode provisionar em uma assinatura do Azure.
+
 ## Conceitos básicos dos serviços de IA do Azure (Azure AI Services)
 
 ## Fundamentos da Pesquisa Visual Computacional (Computer Vision)
