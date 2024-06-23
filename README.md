@@ -518,6 +518,30 @@ Você pode começar a treinar modelos no **Estúdio de Informação de Documento
 
 ## Conceitos básicos da mineração de conhecimento e da Pesquisa de IA do Azure (Knowledge Mining; Azure AI Search)
 
+A **Pesquisa de IA do Azure** oferece a infraestrutura (SLA de 99,9%) e as ferramentas para criar soluções de pesquisa que extraem dados de uma variedade de documentos estruturados, semiestruturados e não estruturados. Oferece um mecanismo de pesquisa programável criado com base no **Apache Lucene**, uma biblioteca de software de código aberto.
+
+A Pesquisa de IA do Azure vem com os seguintes recursos:
+
+- **Dados de qualquer fonte**: fornecidos no formato JSON.
+- **Pesquisa e análise de texto completo**: tanto para consultas simples quanto para sintaxe de consulta Lucene completa.
+- **Pesquisa impulsionada por IA**: funcionalidades de IA do Azure incorporadas para análise de imagem e texto (enriquecimento de IA).
+  - Habilidades de processamento de linguagem natural
+  - Habilidades de processamento de imagem
+- **Multilíngue**: análise linguística para 56 idiomas.
+- **Habilitado para pesquisa geográfica**: filtragem de pesquisa geográfica com base na proximidade com uma localização física.
+- **Experiência do usuário configurável**: preenchimento automático, sugestão automática, paginação e realce de ocorrências.
+
+É importante ressaltar que a Pesquisa de IA do Azure pode utilizar os recursos integrados dos serviços de IA do Azure, como processamento de imagem, extração de conteúdo e processamento de linguagem natural para realizar a mineração de conhecimento de documentos.
+
+Um índice da Pesquisa de IA do Azure pode ser visto como um contêiner de documentos pesquisáveis, uma coleção persistente de documentos JSON. Conceitualmente, você pode considerar um índice como uma tabela, e cada linha da tabela representa um documento. As tabelas nas colunas podem ser pensadas como equivalentes aos campos em um documento. Colunas têm tipos de dados, da mesma forma que os campos nos documentos.
+
+A Pesquisa de IA do Azure permite criar e carregar documentos JSON em um índice de duas maneiras:
+
+- **Método de push**: os dados JSON são enviados por push a um índice de pesquisa por meio da API REST ou do SDK do .NET. O envio de dados por push tem mais flexibilidade, pois não tem nenhuma restrição quanto ao tipo de fonte de dados, à localização nem à frequência de execução.
+- **Método de pull**: os indexadores do serviço Pesquisa podem efetuar pull de dados de fontes de dados populares do Azure e, se necessário, exportar esses dados para o JSON, se ainda não estiverem nesse formato.
+
+Depois de criarmos o índice, poderemos executar consultas. As consultas da Pesquisa de IA do Azure podem ser enviadas como uma solicitação de API REST ou HTTP, com a resposta fornecida como JSON. A Pesquisa de IA do Azure dá suporte a dois tipos de sintaxe: simples e Lucene completa. A sintaxe simples abrange todos os cenários comuns de consulta, enquanto o Lucene completo é útil para cenários avançados.
+
 ## Conceitos básicos de IA Generativa
 
 ## Conceitos básicos do Serviço OpenAI do Azure (Azure OpenAI Service)
