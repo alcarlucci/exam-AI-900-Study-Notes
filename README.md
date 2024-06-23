@@ -364,6 +364,28 @@ Algumas considerações na detecção nas imagens:
 
 ## Princípios básicos do reconhecimento óptico de caracteres (OCR)
 
+A capacidade dos sistemas de computação de processar textos escritos e impressos é uma área da IA em que a *pesquisa visual computacional* se cruza com o *processamento de linguagem natural*. As funcionalidades do Visão são necessárias para "leitura" do texto e, em seguida, as funcionalidades de processamento de linguagem natural dão sentido a ele.
+
+O **OCR** é a base do processamento de textos em imagens e usa modelos de machine learning treinados para reconhecer formas individuais como letras, numerais, sinais de pontuação ou outros elementos de texto.
+
+A *API de Leitura* (conhecida como *mecanismo OCR de Leitura*) da **Visão de IA do Azure** é o mecanismo OCR por trás da extração de texto de imagens, PDFs e arquivos TIFF.
+
+Chamar a *API de Leitura* retorna os resultados organizados na seguinte hierarquia:
+
+- **Páginas**: uma para cada página de texto, incluindo informações sobre o tamanho e a orientação da página.
+- **Linhas**: as linhas de texto em uma página.
+- **Palavras**: palavras em uma linha de texto.
+
+Cada linha e palavra inclui coordenadas de caixa delimitadora indicando sua posição na página.
+
+![OCR-pages-lines-words](./img/OCR-pages-lines-words.jpg)
+
+Depois que você cria um recurso (Visão de IA do Azure; Serviços de IA do Azure), há várias maneiras de usar a API de Leitura da Visão de IA do Azure:
+
+- Azure Vision Studio
+- API REST
+- SDKs (Software Development Kits): Python, C#, JavaScript
+
 ## Conceitos básicos da Análise de Texto com o Serviço de Linguagem
 
 ## Conceitos básicos das respostas às perguntas com o Serviço de Linguagem
