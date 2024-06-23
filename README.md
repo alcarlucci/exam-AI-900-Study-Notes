@@ -419,6 +419,24 @@ Entre as tarefas comuns de NLP compatíveis com modelos de linguagem incluem-se:
 
 ## Conceitos básicos das respostas às perguntas com o Serviço de Linguagem
 
+A **resposta a perguntas** dá suporte a cargas de trabalho de IA de linguagem natural que exigem um elemento de conversa automatizada. Normalmente, a resposta a perguntas é usada para criar *aplicativos de bot* que respondem a consultas de clientes. Os bots podem ser implementados em plataformas como um site ou uma rede social.
+
+Dois serviços principais para criar uma solução de bot para o suporte ao usuário no Microsoft Azure:
+
+- **Linguagem de IA do Azure**: inclui um recurso de resposta às perguntas personalizadas, que permite definir uma *base de conhecimento* de pares de pergunta e resposta que podem ser consultados usando entrada de linguagem natural.
+- **Serviço de Bot de IA do Azure**: oferece uma estrutura para desenvolver, publicar e gerenciar bots no Azure.
+
+Depois de provisionar um recurso de linguagem, você poderá usar o recurso de resposta a perguntas personalizadas do Estúdio de Linguagem para criar um projeto que consiste em pares de perguntas e respostas. Essas perguntas podem ser:
+
+- Geradas com base em um documento existente de perguntas frequentes ou uma página da Web.
+- Inseridas e editadas manualmente.
+
+Você pode usar a interface de teste interna no Language Studio para testar sua base de dados de conhecimento enviando perguntas e revisando as respostas retornadas.
+
+Depois de criar e implantar uma base de dados de conhecimento, você pode disponibilizá-la aos usuários por meio de um bot. A abordagem mais fácil é usar a funcionalidade de criação automática de bot, que permite criar um bot para a sua base de dados de conhecimento implantada e publicá-lo como um aplicativo do **Serviço de Bot de IA do Azure** com apenas alguns cliques.
+
+Quando o bot estiver pronto para ser entregue aos usuários, você poderá conectá-lo a vários *canais*, possibilitando que os usuários interajam com ele por meio do Webchat, do email, do Microsoft Teams e de outras mídias de comunicação comuns.
+
 ## Conceitos básicos da compreensão da linguagem coloquial (conversational language)
 
 ## Princípios básicos da Fala de IA do Azure (Azure AI Speech)
