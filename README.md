@@ -439,6 +439,27 @@ Quando o bot estiver pronto para ser entregue aos usuários, você poderá conec
 
 ## Conceitos básicos da compreensão da linguagem coloquial (conversational language)
 
+O Microsoft Azure suporta a *compreensão da linguagem coloquial* por meio do serviço de **Linguagem de IA do Azure**, compreendendo muitos tipos de tarefas que envolvem comando e controle, conversa de ponta a ponta e suporte corporativo. Um exemplo disso seria um aplicativo capaz de ativar e desativar dispositivos com base na fala.
+
+A *compreensão da linguagem coloquial* leva em conta três conceitos principais:
+
+- **Enunciados**: algo que um usuário poderá dizer e que seu aplicativo deverá interpretar.
+  - *Ligar as luzes*; *Ligar o ventilador*
+- **Entidades**: é um item ao qual um enunciado se refere, como *ventilador* e *luz* nos enunciados acima.
+- **Intenções**: representa a finalidade ou meta expressada no enunciado de um usuário, nos enunciados acima a intenção é *ligar* um dispositivo.
+
+Um aplicativo de compreensão da linguagem coloquial define um modelo que consiste em *intenções* e *entidades*. Os *enunciados* são usados para treinar o modelo com o objetivo de identificar a intenção e as entidades mais prováveis às quais ele será aplicado.
+
+A intenção ***None*** tem uma importância exclusiva, para ajudar a lidar com enunciados que não mapeiam nenhum dos enunciados inseridos por você, nesse caso, sendo utilizada para fornecer uma resposta genérica aos usuários.
+
+A compreensão da linguagem coloquial fornece uma coleção abrangente de *domínios* predefinidos que incluem *intenções* e *entidades* predefinidas para cenários comuns. Você poderá usá-los como ponto de partida para seu modelo. Também será possível criar suas entidades e intenções. É possível escrever códigos para definir os elementos do modelo, mas, na maioria dos casos, é mais fácil criar o modelo usando o **Estúdio de Linguagem do Azure**.
+
+Depois de definir as intenções e as entidades no modelo, bem como incluir um conjunto adequado de enunciados de exemplo, a próxima etapa será treinar o modelo. Treinamento é o processo de usar enunciados de exemplo para ensinar seu modelo a combinar as expressões de linguagem natural que um usuário poderá dizer com prováveis intenções e entidades.
+
+Depois de treinar o modelo, será possível fazer um teste enviando um texto e analisando as intenções previstas. O treinamento e o teste são processos iterativos. Após, você poderá publicar seu aplicativo de Compreensão da Linguagem Coloquial em um recurso de previsão para consumo.
+
+Os aplicativos cliente poderão usar o modelo ao se conectar ao ponto de extremidade do recurso de previsão, especificar a chave de autenticação apropriada, bem como ao enviar a entrada do usuário para obter intenções e entidades previstas. As previsões serão retornadas para o aplicativo cliente que poderá executar a ação apropriada com base na intenção prevista.
+
 ## Princípios básicos da Fala de IA do Azure (Azure AI Speech)
 
 ## Princípios básicos da IA do Azure para Informação de Documentos (Azure AI Document Intelligence)
