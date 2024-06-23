@@ -504,6 +504,18 @@ O Microsoft Azure oferece funcionalidades de reconhecimento de fala e sintetiza�
 
 ## Princípios básicos da IA do Azure para Informação de Documentos (Azure AI Document Intelligence)
 
+A **IA do Azure para Informação de Documentos** dá suporte a recursos que podem analisar documentos e formulários com modelos predefinidos e personalizados.
+
+A Informação de Documentos depende de modelos de machine learning treinados para reconhecer dados em texto. A capacidade de extrair pares de texto, layout e chave-valor é conhecida como *análise de documentos*. A análise de documentos fornece locais de texto em uma página identificados por coordenadas de caixas delimitadoras.
+
+A IA do Azure para Informação de Documentos consiste em recursos agrupados por tipos de modelo:
+
+- **Modelos predefinidos**: modelos pré-treinados criados para processar tipos de documentos comuns, como faturas, cartões de visita, documentos de identificação e outros.
+- **Modelos personalizados**: podem ser treinados para identificar campos específicos que não estão incluídos nos modelos pré-treinados existentes.
+- **Análise de documentos**: análise geral de documentos que retorna representações de dados estruturados.
+
+Você pode começar a treinar modelos no **Estúdio de Informação de Documentos**, uma interface de usuário para testar a análise de documentos, modelos predefinidos e criar modelos personalizados.
+
 ## Conceitos básicos da mineração de conhecimento e da Pesquisa de IA do Azure (Knowledge Mining; Azure AI Search)
 
 ## Conceitos básicos de IA Generativa
