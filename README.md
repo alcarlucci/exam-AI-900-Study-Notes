@@ -388,6 +388,35 @@ Depois que você cria um recurso (Visão de IA do Azure; Serviços de IA do Azur
 
 ## Conceitos básicos da Análise de Texto com o Serviço de Linguagem
 
+Para que interpretem o assunto de um texto de forma semelhante aos humanos, os sistemas de computador usam o **processamento de linguagem natural (NLP)**, uma área dentro da IA que trata da compreensão da linguagem escrita ou falada e de como responder à altura. A *análise de texto* descreve os processos de NLP que extraem informações de textos não estruturados.
+
+A **Linguagem de IA do Azure** é um serviço em nuvem que inclui vários recursos que dão suporte à análise de sentimentos, à identificação de frases-chave, aos resumos de texto e a entender a linguagem de conversação.
+
+Algumas das primeiras técnicas usadas para analisar texto com computadores envolvem a análise estatística de um corpo de texto (um *corpus*) para inferir algum tipo de significado semântico. A primeira etapa na análise de um corpus é dividi-lo em *tokens*. Para simplificar, você pode pensar em cada palavra distinta no texto de treinamento como um token, mas podem ser gerados para palavras parciais ou combinações de palavras e pontuação.
+
+Dependendo do tipo específico de problema de NLP, os seguintes conceitos podem se aplicar à geração de tokens:
+
+- **Normalização de texto**
+- **Remoção de palavra irrelevante (stop word: *o*, *a* ou *uns*)**
+- **n-gramas**
+- **lematização**
+
+Depois de gerar os *tokens* das palavras, você pode executar algumas análises para contar o número de ocorrências de cada token. As palavras mais usadas muitas vezes podem fornecer uma pista sobre o assunto principal de um *corpus* de texto.
+
+Uma técnica útil de análise de texto é usar um algoritmo de classificação, como ***regressão logística***, para treinar um modelo de machine learning que classifica o texto com base em um conjunto conhecido de categorizações. Uma aplicação comum dessa técnica é treinar um modelo que classifica o texto como *positivo* ou *negativo* para executar a *análise de sentimento* ou a *mineração de opiniões*.
+
+Entre as tarefas comuns de NLP compatíveis com modelos de linguagem incluem-se:
+
+- **Análise de texto**: como extrair termos chave ou identificar entidades nomeadas no texto.
+- **Análise de sentimento e mineração de opiniões**: categorizar o texto como *positivo* ou *negativo*; retorna:
+  - Sentimento do documento
+  - Pontuações de sentimento em três categorias: positivo, neutro e negativo
+- **Tradução automática**: o texto é convertido automaticamente de um idioma para outro.
+- **Sumarização**: os principais pontos de um grande corpo de texto são resumidos.
+- **Soluções de IA de conversação**: como *bots* ou *assistentes digitais*, nas quais o modelo de linguagem pode interpretar a entrada de linguagem natural e retornar uma resposta apropriada.
+
+![language-model](./img/language-model.png)
+
 ## Conceitos básicos das respostas às perguntas com o Serviço de Linguagem
 
 ## Conceitos básicos da compreensão da linguagem coloquial (conversational language)
