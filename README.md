@@ -462,6 +462,46 @@ Os aplicativos cliente poderão usar o modelo ao se conectar ao ponto de extremi
 
 ## Princípios básicos da Fala de IA do Azure (Azure AI Speech)
 
+A **Fala de IA do Azure** fornece recursos de conversão de *fala em texto* e conversão de *texto em fala* por meio de reconhecimento de fala e síntese.
+
+- **Reconhecimento de Fala**: a capacidade de detectar e interpretar a entrada falada
+- **Sintetização de voz**: a capacidade de gerar uma saída falada
+
+O **reconhecimento de fala** usa a palavra falada e a converte em dados que podem ser processados, muitas vezes transcrevendo-a em texto, tendo como fonte uma voz gravada em um arquivo de áudio ou em um áudio ao vivo de um microfone. Para fazer isso, o software normalmente usa vários modelos:
+
+- Um *modelo acústico* que converte o sinal de áudio em fonemas.
+- Um *modelo de linguagem* que transforma os fonemas em palavras, geralmente usando um algoritmo estatístico.
+
+Várias finalidades no reconhecimento de fala:
+
+- Fornecer legendas ocultas para vídeos gravados ou ao vivo.
+- Criar uma transcrição de uma chamada telefônica ou de uma reunião.
+- Ditado de anotação automatizada.
+- Determinar a entrada do usuário pretendida para obter um processamento adicional.
+
+A **síntese de fala** trata da vocalização de dados, geralmente convertendo texto em fala. Uma solução de sintetização de voz normalmente requer as seguintes informações:
+
+- O texto a ser falado.
+- A voz a ser usada para vocalizar a fala.
+
+Várias finalidades para sintetização de voz:
+
+- Gerar respostas faladas para a entrada do usuário.
+- Criar menus de voz para sistemas telefônicos.
+- Ler mensagens de email ou texto em voz alta em cenários de mãos livres.
+- Difundir comunicados em locais públicos, como estações ferroviárias ou aeroportos.
+
+O Microsoft Azure oferece funcionalidades de reconhecimento de fala e sintetização de voz por meio do serviço de **Fala de IA do Azure**, que inclui as seguintes APIs:
+
+- API de **Conversão de Fala em Texto**
+  - transcrição em tempo real
+  - transcrição em lote
+- API de **Conversão de Texto em Fala**
+  - reproduzida de modo direto por meio de um alto-falante de computador
+  - gravada em um arquivo de áudio
+  - vozes predefinidas, compatíveis com diversos idiomas e pronúncias regionais
+  - possibilidade de desenvolver vozes personalizadas
+
 ## Princípios básicos da IA do Azure para Informação de Documentos (Azure AI Document Intelligence)
 
 ## Conceitos básicos da mineração de conhecimento e da Pesquisa de IA do Azure (Knowledge Mining; Azure AI Search)
