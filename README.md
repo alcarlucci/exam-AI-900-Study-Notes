@@ -612,6 +612,50 @@ O *Estúdio de IA do Azure* é um portal de desenvolvimento PaaS e oferece contr
 
 ## Conceitos básicos do Serviço OpenAI do Azure (Azure OpenAI Service)
 
+Em 2022, a **OpenAI**, uma empresa de pesquisa de IA, criou um chatbot conhecido como **ChatGPT** e um aplicativo de geração de imagens conhecido como **DALL-E**. Essas tecnologias foram construídas com modelos de IA que podem receber entrada de linguagem natural de um usuário e retornar uma resposta criada por máquina semelhante à fornecida por um humano.
+
+Recursos dos modelos de IA do OpenAI:
+
+- **Geração de linguagem natural**: gerar e editar textos; pesquisar, classificar e comparar textos.
+- **Geração de código**: gerar, editar e explicar códigos.
+- **Geração de imagens**: gerar e editar imagens.
+
+O **Serviço OpenAI do Azure**, resultado da parceria entre a Microsoft e a OpenAI, permite que os usuários criem soluções corporativas com os modelos do OpenAI. Com esse serviço, os usuários podem resumir textos, obter sugestões de código, gerar imagens para um site e muito mais.
+
+O OpenAI do Azure está disponível para usuários do Azure e consiste em quatro componentes:
+
+- Modelos de IA generativa pré-treinados.
+- Capacidades de personalização: a capacidade de ajustar modelos de IA com os próprios dados.
+- Ferramentas integradas para detectar e mitigar casos de uso prejudiciais para implementações de IA com responsabilidade.
+- Segurança corporativa com RBAC (controle de acesso baseado em função) e redes privadas.
+
+Atualmente, é necessário solicitar acesso ao OpenAI do Azure. Depois de ter o acesso concedido, você pode usar o serviço criando um recurso do OpenAI do Azure, como faria em outros serviços do Azure. Depois da criação do recurso, é possível usar o serviço por meio de *APIs REST*, do *SDK do Python* ou da interface baseada na Web no **Estúdio do OpenAI do Azure**.
+
+No **Estúdio do OpenAI do Azure**, é possível criar modelos de IA e implantá-los para consumo público em aplicativos de software. Os recursos do OpenAI do Azure são possíveis devido a modelos específicos de IA generativa. Esses modelos do OpenAI do Azure incluem:
+
+- Modelos **GPT-4**
+- Modelos **GPT-3,5**
+- Modelos de **inserção** que convertem texto em vetores numéricos para análise
+- Modellos **DALL-E** que geram imagens
+
+Os modelos de GPT (*transformadores* pré-treinados generativos) são excelentes para entender e criar linguagem natural. No Estúdio do OpenAI do Azure, é possível testar modelos do OpenAI em **playgrounds**.
+
+- **Playground Completions (Conclusões)**: digitar prompts, configurar parâmetros e ver respostas sem precisar codificar.
+- **Playground Chat**: usar a configuração do assistente para instruir o modelo sobre como ele deve se comportar. O assistente tentará imitar as respostas que você incluir com o tom, as regras e o formato que você definiu na *mensagem do sistema*.
+
+Um aspecto fundamental da IA generativa do OpenAI é que ela requer uma entrada, ou **prompt**, para retornar uma linguagem natural, um visual ou uma resposta de código. O GPT tenta inferir ou adivinhar o contexto da pergunta do usuário com base no prompt.
+
+O uso do OpenAI do Azure deve seguir os seis princípios de IA da Microsoft:
+
+- **Imparcialidade**
+- **Confiabilidade e segurança**
+- **Privacidade e segurança**
+- **Inclusão**
+- **Responsabilidade**
+- **Transparência**
+
+Os princípios de IA responsável guiam as **notas de transparência da Microsoft sobre o OpenAI do Azure**, bem como explicações de outros produtos. As notas de transparência visam ajudar você a entender como a tecnologia de IA da Microsoft funciona, as escolhas que os proprietários do sistema podem fazer que influenciam o desempenho e o comportamento dele e a importância de pensar sobre todo o sistema, incluindo a tecnologia, as pessoas e o ambiente.
+
 ## Conceitos básicos da IA generativa responsável
 
 ---
