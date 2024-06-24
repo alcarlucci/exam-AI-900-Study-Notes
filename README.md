@@ -1,6 +1,6 @@
 # Exame AI-900
 
-Anotações de Estudo para o Exame AI-900 - Azure AI Fundamentals.  
+Anotações de Estudo para o **Exame AI-900 - Azure AI Fundamentals**.  
 Veja as referências para o exame em: <https://learn.microsoft.com/pt-br/credentials/certifications/azure-ai-fundamentals>
 
 ## Conceitos Fundamentais de IA
@@ -657,6 +657,63 @@ O uso do OpenAI do Azure deve seguir os seis princípios de IA da Microsoft:
 Os princípios de IA responsável guiam as **notas de transparência da Microsoft sobre o OpenAI do Azure**, bem como explicações de outros produtos. As notas de transparência visam ajudar você a entender como a tecnologia de IA da Microsoft funciona, as escolhas que os proprietários do sistema podem fazer que influenciam o desempenho e o comportamento dele e a importância de pensar sobre todo o sistema, incluindo a tecnologia, as pessoas e o ambiente.
 
 ## Conceitos básicos da IA generativa responsável
+
+As diretrizes da Microsoft para IA generativa definem um processo de quatro fases para desenvolver e implementar um plano de IA responsável:
+
+1. **Identificar** possíveis danos relevantes para a solução planejada.
+2. **Medir** a presença desses danos nas saídas geradas pela solução.
+3. **Atenuar** os danos em várias camadas da solução para minimizar sua presença e impacto e garantir uma comunicação transparente sobre possíveis riscos para os usuários.
+4. **Operar** a solução com responsabilidade definindo e seguindo um plano de implantação e de preparação operacional.
+
+Obs.: essas fases correspondem de perto às funções no [NIST AI Risk Management Framework](https://www.nist.gov/itl/ai-risk-management-framework)
+
+### Identificar possíveis danos
+
+A primeira fase em um processo de IA generativa responsável é identificar os possíveis danos que podem afetar a solução planejada. Essa fase tem quatro etapas:
+
+1. Identificar possíveis danos
+2. Priorizar os danos identificados
+3. Testar e verificar os danos priorizados
+4. Documentar e compartilhar os danos verificados
+
+Examine as diretrizes no [Guia de Avaliação do Impacto da IA Responsável da Microsoft](https://aka.ms/RAIImpactAssessmentGuidePDF) e use o [modelo de Avaliação do Impacto da IA Responsável](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RE5cmFk) associado para documentar possíveis danos.
+
+### Medir possíveis danos
+
+Após compilar uma lista priorizada de possíveis saídas prejudiciais, você pode testar a solução para medir a presença e o impacto dos danos. A meta é criar uma linha de base inicial que quantifique os danos produzidos pela solução em determinados cenários de uso e, em seguida, acompanhar aprimoramentos na linha de base à medida que você faz alterações iterativas na solução para atenuar os danos.
+
+Uma abordagem generalizada para medir um sistema quanto a possíveis danos é composta por três etapas:
+
+1. Prepare uma seleção diversificada de prompts de entrada que provavelmente resultarão em cada dano potencial documentado para o sistema.
+2. Envie os prompts para o sistema e recupere a saída gerada.
+3. Aplique critérios predefinidos para avaliar a saída e categorizá-la de acordo com o nível dos possíveis danos contidos nela. A categorização pode ser simples, como "prejudicial" ou "não prejudicial", ou você pode definir um intervalo de níveis de danos.
+
+### Atenuar possíveis danos
+
+Após determinar uma linha de base e uma maneira de medir a saída prejudicial gerada por uma solução, você pode adotar medidas para atenuar os possíveis danos. A mitigação de possíveis danos em uma solução de IA generativa envolve uma abordagem em camadas, conforme mostrado aqui:
+
+![mitigate-harms](./img/mitigate-harms.png)
+
+1. **Modelo**: modelos de IA generativa no centro da solução.
+2. **Sistema de segurança**: configurações e funcionalidades no nível da plataforma que ajudam a atenuar danos. O Serviço OpenAI do Azure inclui suporte para *filtros de conteúdo* para suprimir prompts e respostas em 4 níveis de gravidade (*seguro, baixo, médio e alto*) para 4 categorias de danos (*ódio, sexual, violência e automutilação*).
+3. **Metaprompt e aterramento**: se concentra na construção de prompts que são enviados para o modelo.
+4. **Experiência do usuário**: inclui o aplicativo de software por meio do qual os usuários interagem com o modelo de IA generativo, bem como a documentação ou outra garantia do usuário que descreve o uso da solução para seus usuários.
+
+### Operar uma solução de IA generativa responsável
+
+Após identificar possíveis danos, desenvolver uma maneira de medir a presença deles e implementar mitigações para eles em sua solução, você pode se preparar para lançar a solução. Antes de fazer isso, há algumas considerações que ajudam você a garantir o sucesso do lançamento e das operações posteriores.
+
+- **Fazer revisões de pré-lançamento**: identifique os diferentes requisitos de conformidade na organização e no setor. As revisões comuns de conformidade incluem:
+  - Ofício
+  - Privacidade
+  - Segurança
+  - Acessibilidade
+- **Lançar e operar a solução**: requer algum planejamento e preparação:
+  - plano de entrega em fases
+  - plano de resposta a incidentes
+  - plano de reversão
+  - maneira de os usuários fornecerem comentários e relatarem problemas
+  - acompanhe os dados de telemetria
 
 ---
 Bons estudos!  
