@@ -544,6 +544,72 @@ Depois de criarmos o índice, poderemos executar consultas. As consultas da Pesq
 
 ## Conceitos básicos de IA Generativa
 
+A **IA generativa** descreve uma categoria de recursos dentro da IA que cria *conteúdo original*. Os aplicativos de IA generativa recebem entrada em linguagem natural e retornam respostas apropriadas em uma variedade de formatos, como *linguagem natural*, *imagens* ou *código*.
+
+Os aplicativos de IA generativa são alimentados por *modelos de linguagem*, que são um tipo especializado de modelo de machine learning que você pode usar para executar tarefas de *processamento de linguagem natural (NLP)*, incluindo:
+
+- Determinar sentimento ou classificar de outra forma o texto em idioma natural.
+- Resumir um texto.
+- Comparar várias fontes de texto quanto à similaridade semântica.
+- Geração de nova linguagem natural.
+
+Organizações e desenvolvedores podem treinar seus próprios modelos de linguagem do zero, mas, na maioria dos casos, é mais prático usar um modelo de base existente e, opcionalmente, ajustá-lo com seus próprios dados de treinamento.
+
+No Microsoft Azure, você pode encontrar *modelos de base* no serviço **OpenAI do Azure** e no Catálogo de Modelos. O Catálogo de Modelos é uma fonte de modelos para cientistas e desenvolvedores de dados usando o *Estúdio de IA do Azure* e o *Azure Machine Learning*.
+
+- **coleção de modelos GPT** (transformador generativo pré-treinado)
+- **modelo DALL-E** para geração de imagem
+
+Em geral, os modelos de linguagem podem ser considerados em dois categorizados: 
+
+- **Modelos de linguagem grandes (LLMs)**: LLMs são treinadas com grandes quantidades de texto que representam uma ampla gama de assuntos gerais, normalmente fornecendo dados da Internet e de outras publicações disponíveis em geral.
+- **Modelos de linguagem pequenos (SLMs)**: SLMs são treinados com conjuntos de dados menores e mais focados no assunto.
+
+### O que são Copilots?
+
+**Copilots** são assistentes de IA generativa integrados a aplicativos geralmente como interfaces de chat. Eles fornecem suporte contextualizado para tarefas comuns nesses aplicativos.
+
+O **Microsoft Copilot** é integrado a uma ampla gama de aplicativos da Microsoft e experiências do usuário. Ele se baseia em uma arquitetura aberta que permite que desenvolvedores de terceiros criem seus próprios plug-ins para estender ou personalizar a experiência do usuário com o Microsoft Copilot. Além disso, desenvolvedores de terceiros podem criar seus próprios copilotos usando a mesma arquitetura aberta.
+
+Os copilotos têm o potencial de revolucionar a maneira como trabalhamos ajudando com os primeiros rascunhos, síntese de informações, planejamento estratégico e muito mais. O objetivo das características do copiloto é capacitar as pessoas a serem mais inteligentes, mais produtivas, mais criativas e conectadas às pessoas e às coisas ao seu redor.
+
+Em geral, você pode categorizar a adoção do Copilot pessoal e do setor de três maneiras: pronto para uso, extensão do Microsoft Copilot e desenvolvimento personalizado.
+
+Veja alguns dos diferentes casos de uso para o Microsoft Copilot abaixo:
+
+- Navegação na Web com IA
+- Copilot para Microsoft 365
+- Usar IA para dar suporte a processos de negócios
+  - Copilot no Dynamics 365 Customer Service
+  - Copilot para Dynamics 365 Sales (CRM)
+  - Copilot para Dynamics 365 Supply Chain
+- Análise de dados assistida por IA
+  - Copilot no Microsoft Fabric
+  - Copilot no Power BI
+- Gerenciar a infraestrutura e a segurança de TI
+  - Microsoft Copilot para Segurança (Defender)
+  - Microsoft Copilot para Azure
+- Desenvolvimento de software habilitado para IA
+  - GitHub Copilot
+
+A qualidade das respostas dos copilotos não depende apenas do modelo de linguagem usado, mas dos tipos de solicitações que os usuários fornecem. Os **prompts** são as maneiras de informarmos a um aplicativo o que queremos que ele faça. O termo **engenharia de prompt** descreve o processo de aprimoramento de prompts. Tantos os desenvolvedores que criam aplicativos quanto consumidores que usam esses aplicativos podem melhorar a qualidade das respostas da IA generativa ao considerar a *engenharia de prompts*.
+
+#### Mensagem do sistema
+
+Uma *mensagem do sistema* que define condições e restrições para o comportamento do modelo de idioma. Por exemplo, "*Você é um assistente útil que responde de maneira alegre e amigável*." Essas mensagens do sistema determinam restrições e estilos para as respostas do modelo.
+
+### Estendendo e desenvolvendo Copilots
+
+Se sua organização tomar a decisão de personalizar o co-piloto da Microsoft ou desenvolver copilotos personalizados, a Microsoft fornecerá duas ferramentas que você pode usar, o *Copilot Studio* e o *Estúdio de IA do Azure*.
+
+#### Copilot Studio
+
+O *Copilot Studio* foi projetado para funcionar bem para cenários de desenvolvimento de *lowcode* nos quais usuários ou desenvolvedores de negócios tecnicamente proficientes podem criar experiências de IA de conversa. O copiloto resultante é uma solução SaaS (software como serviço) totalmente gerenciada, hospedada em seu ambiente do Microsoft 365 e entregue por meio de canais de chat como o Microsoft Teams
+
+#### Estúdio de IA do Azure
+
+O *Estúdio de IA do Azure* é um portal de desenvolvimento PaaS e oferece controle total sobre o modelo de linguagem que você deseja usar, incluindo a capacidade de ajustar o modelo com seus próprios dados. Você pode implantar o serviço de copiloto resultante na nuvem e consumi-lo de aplicativos e serviços desenvolvidos sob medida.
+
 ## Conceitos básicos do Serviço OpenAI do Azure (Azure OpenAI Service)
 
 ## Conceitos básicos da IA generativa responsável
